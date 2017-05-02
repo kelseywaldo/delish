@@ -1,6 +1,5 @@
 class HomepagesController < ApplicationController
 
-  def index
-    @search_term 
-  end
+  def index; end
+
 end
