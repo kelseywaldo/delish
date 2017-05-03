@@ -1,11 +1,12 @@
-<h2>Here's some recipes for (search term)</h2>
+<section id="page-header">
+  <h2>Here's some (search term) recipes</h2>
+</section>
 
 <section id="list-recipe-results">
   <% @recipes.each do | recipe | %>
     <section class="recipe-block">
       <%= image_tag recipe.image %>
       <%= link_to recipe.name, recipe_path(:name => recipe.name, :uri => recipe.uri) %>
-      <p> source: <%= recipe.recipe_source %></p>
     </section>
   <% end %>
 </section>

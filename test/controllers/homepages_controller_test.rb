@@ -10,5 +10,8 @@ describe HomepagesController do
 
   end
 
+  it "" do
+
+  end
 
 end

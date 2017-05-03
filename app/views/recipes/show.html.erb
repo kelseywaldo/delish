@@ -1,9 +1,11 @@
+<section id="page-header">
 <h2><%= @recipe.name %></h2>
+</section>
 
 <section id="recipe-details">
   <%= image_tag @recipe.image %>
 
-  <p> source: <%= @recipe.recipe_source %></p>
+  <p><%= link_to @recipe.recipe_source, @recipe.url %></p>
   <ul>
   <% @recipe.health_labels.each do | healthlabel |  %>
     <li><%= healthlabel %></li>
