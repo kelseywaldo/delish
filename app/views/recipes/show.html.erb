@@ -1,7 +1,17 @@
 <h2>(Recipe Name)</h2>
 
 <section id="recipe-details">
-(link to original site) -- open in new tab
-(list of ingredients)
-(dietary information)
+  <%= image_tag @recipe.image %>
+  <%= @recipe.name %>
+  <p> source: <%= @recipe.recipe_source %></p>
+  <ul>
+  <% @recipe.health_labels.each do | healthlabel |  %>
+    <li><%= healthlabel %></li>
+  <% end %>
+  </ul>
+  <ul>
+  <% @recipe.ingredient_lines.each do | ingredient | %>
+    <li><%= ingredient %></li>
+  <% end %>
+  </ul>
 </section>

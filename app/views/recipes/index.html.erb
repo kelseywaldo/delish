@@ -4,10 +4,18 @@
   <% @recipes.each do | recipe | %>
     <section class="recipe-block">
       <%= image_tag recipe.image %>
-      <%= recipe.uri %>
-      <%= link_to recipe.name, recipe.uri %>
+      <%= link_to recipe.name, recipe_path(:name => recipe.name, :uri => recipe.uri) %>
       <p> source: <%= recipe.recipe_source %></p>
-      <%= recipe.health_labels %>
+      <ul>
+      <% recipe.health_labels.each do | healthlabel |  %>
+        <li><%= healthlabel %></li>
+      <% end %>
+      </ul>
+      <ul>
+      <% recipe.ingredient_lines.each do | ingredient | %>
+        <li><%= ingredient %></li>
+      <% end %>
+      </ul>
     </section>
   <% end %>
 </section>

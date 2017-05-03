@@ -1,6 +1,8 @@
 <section id="search-field">
   <%= form_tag(recipes_path, method: :get) do %>
     <p>
+      <%= hidden_field_tag(:from, 1) %>
+      <%= hidden_field_tag(:to, 10) %>
       <%= label_tag(:search, "What are you hungry for?") %>
       <%= text_field_tag :search %>
       <%= submit_tag 'Search' %>
