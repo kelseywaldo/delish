@@ -6,4 +6,9 @@ describe HomepagesController do
     value(response).must_be :success?
   end
 
+  it "a search should redirect to the recipes list page" do
+
+  end
+
+
 end

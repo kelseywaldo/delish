@@ -1,8 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = ["chicken", "dinner", "food", "yum"]
-    # all recipes found from search
-    # using API Wrapper
+    @recipes = EdamamApiWrapper.getRecipeList
   end
 
   def show
