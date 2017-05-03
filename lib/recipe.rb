@@ -1,7 +1,8 @@
 class Recipe
+
   attr_reader :name, :uri, :image, :recipe_source, :health_labels, :ingredient_lines
 
-  def initialize(name, uri, image, recipe_source, health_labels, ingredient_lines)
+  def initialize(name, uri, image, options = {} )
     # raise ArgumentError if name == nil || name == "" || id == nil || id == ""
     @name = name
     @uri = URI.escape(uri)

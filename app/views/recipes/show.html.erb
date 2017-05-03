@@ -1,8 +1,8 @@
-<h2>(Recipe Name)</h2>
+<h2><%= @recipe.name %></h2>
 
 <section id="recipe-details">
   <%= image_tag @recipe.image %>
-  <%= @recipe.name %>
+
   <p> source: <%= @recipe.recipe_source %></p>
   <ul>
   <% @recipe.health_labels.each do | healthlabel |  %>
