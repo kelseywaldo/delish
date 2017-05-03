@@ -6,6 +6,7 @@
       <%= image_tag recipe.image %>
       <%= link_to recipe.name, recipe.uri %>
       <p> source: <%= recipe.recipe_source %></p>
+      <%= recipe.health_labels %>
     </section>
   <% end %>
 </section>
