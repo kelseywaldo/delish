@@ -4,7 +4,7 @@ class Recipe
   def initialize(name, uri, image, recipe_source, health_labels)
     # raise ArgumentError if name == nil || name == "" || id == nil || id == ""
     @name = name
-    @uri = uri
+    @uri = URI.escape(uri)
     @image = image
     @recipe_source = recipe_source
     @health_labels = health_labels

@@ -4,6 +4,7 @@
   <% @recipes.each do | recipe | %>
     <section class="recipe-block">
       <%= image_tag recipe.image %>
+      <%= recipe.uri %>
       <%= link_to recipe.name, recipe.uri %>
       <p> source: <%= recipe.recipe_source %></p>
       <%= recipe.health_labels %>

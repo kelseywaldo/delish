@@ -37,7 +37,10 @@ class EdamamApiWrapper
     return recipes
   end
 
-  def self.getRecipe()
+  def self.getRecipe(uri)
+    formatted_uri = URI.escape(uri)
+    url = BASE_URL + "?r=#{formatted_uri}"
+    response = HTTParty.get(url).parsed_response["hits"]
   end
 
 end

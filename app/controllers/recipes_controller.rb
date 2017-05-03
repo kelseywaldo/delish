@@ -4,5 +4,6 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipes = EdamamApiWrapper.getRecipe()
   end
 end
