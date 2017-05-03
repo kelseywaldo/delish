@@ -7,9 +7,9 @@ class Recipe
     @name = name
     @uri = URI.escape(uri)
     @image = image
-    @recipe_source = recipe_source
-    @health_labels = health_labels
-    @ingredient_lines = ingredient_lines
+    @recipe_source = options[:recipe_source]
+    @health_labels = options[:health_labels]
+    @ingredient_lines = options[:ingredient_lines]
   end
 
 end
