@@ -1,2 +1,10 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h2>Here's some recipes for (search term)</h2>
+
+<section id="list-recipe-results">
+  <% @recipes.each do | recipe | %>
+    <section class="recipe-block">
+      (recipe image)
+      <%= recipe %>
+    </section>
+  <% end %>
+</section>

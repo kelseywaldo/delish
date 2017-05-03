@@ -6,9 +6,10 @@ class EdamamApiWrapper
   EDAMAM_KEY = ENV["EDAMAM_KEY"]
   EDAMAM_ID = ENV["EDAMAM_ID"]
 
-  def self.listRecipes()
+  def self.getRecipeList()
+    url = BASE_URL
   end
 
-  def self.findRecipe()
+  def self.getRecipe()
   end
 end

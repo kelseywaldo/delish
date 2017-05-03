@@ -2,7 +2,9 @@
 
 <section id="search-field">
   <%= form_tag(recipes_path, method: :get) do %>
-  <%= text_field_tag :search_term %>
-  <%= submit_tag 'Search' %>
+    <p>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search' %>
+    </p>
   <% end %>
 </section>
