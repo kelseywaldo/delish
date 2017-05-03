@@ -15,12 +15,12 @@ class EdamamApiWrapper
 
     recipes = []
 
-    if response[0]["recipe"]
+    if response[1]["recipe"]
       response.each do | recipe |
-        name = response[0]["recipe"]["label"]
-        uri = response[0]["recipe"]["uri"]
-        image = response[0]["recipe"]["image"]
-        recipe_source = response[0]["recipe"]["source"]
+        name = response[1]["recipe"]["label"]
+        uri = response[1]["recipe"]["uri"]
+        image = response[1]["recipe"]["image"]
+        recipe_source = response[1]["recipe"]["source"]
         recipe = Recipe.new(name, uri, image, recipe_source)
         recipes << recipe
       end

@@ -3,8 +3,9 @@
 <section id="list-recipe-results">
   <% @recipes.each do | recipe | %>
     <section class="recipe-block">
-      (recipe image)
-      <%= recipe.name %>
+      <%= image_tag recipe.image %>
+      <%= link_to recipe.name, recipe.uri %>
+      <p> source: <%= recipe.recipe_source %></p>
     </section>
   <% end %>
 </section>
