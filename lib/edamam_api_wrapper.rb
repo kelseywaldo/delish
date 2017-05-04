@@ -14,7 +14,7 @@ class EdamamApiWrapper
     recipes = []
 
     if response == nil
-      raise ArgumentError.new("Nothing matched your search")
+      return recipes
     else
       response.each_with_index do | recipe, i |
         name = response[i]["recipe"]["label"]

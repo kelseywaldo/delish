@@ -1,14 +1,26 @@
 require "test_helper"
 
 describe RecipesController do
-  it "should get index" do
-    get recipes_index_url
-    value(response).must_be :success?
+
+  describe "index" do
+
+    it "should get index" do
+      get recipes_path(0, 10, "apples")
+      value(response).must_be :success?
+    end
+
+    it "@array should be an array of recipes" do
+    end
+
   end
 
-  it "should get show" do
-    get recipes_show_url
-    value(response).must_be :success?
+  describe "show" do
+
+    it "should show recipe page " do
+      get recipe_path
+      value(response).must_be :success?
+    end
+
   end
 
 end
