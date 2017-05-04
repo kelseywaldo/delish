@@ -3,11 +3,11 @@ require "test_helper"
 describe HomepagesController do
 
   before do
-    VCR.insert_cassette("slack")
+    VCR.insert_cassette("edamam")
   end
 
   after do
-    VCR.eject_cassette("slack")
+    VCR.eject_cassette("edamam")
   end
 
   it "should get index" do
@@ -15,12 +15,9 @@ describe HomepagesController do
     must_respond_with :success
   end
 
-  it "a search should redirect to the recipes list page" do
-
-  end
-
-  it "should save the search term as a parameter" do
-
+  it "should redirect to recipes index page after submiting a search term" do
+    get recipes_path, params: { from: 0, to: 10, search: "apples"}
+    must_respond_with :success
   end
 
 end

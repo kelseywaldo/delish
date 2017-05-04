@@ -23,7 +23,7 @@ describe EdamamApiWrapper do
     end
 
 
-    it "Will return an empty array with an invalid URI" do skip
+    it "Will return an empty array with an invalid URI" do
       recipes = EdamamApiWrapper.getRecipeList("Bad token")
       recipes.must_equal []
     end
@@ -32,14 +32,14 @@ describe EdamamApiWrapper do
 
   describe "self.getRecipe(uri)" do
 
-    it "Can get a channel given a valid uri" do
-      recipe = EdamamApiWrapper.getRecipe("http://www.edamam.com/ontologies/edamam.owl#recipe_bef69a5e3324f42fce1eb845c1f57387")
+    it "Can get a recipe given a valid uri" do
+      recipe = EdamamApiWrapper.getRecipe(name: "name", uri: "http://www.edamam.com/ontologies/edamam.owl%23recipe_bef69a5e3324f42fce1eb845c1f57387")
       recipe.name.must_equal "Dinner Tonight: Rice Salad with Pesto and Shrimp"
     end
 
     it "Returns false for an invalid channel id" do
-      recipe = EdamamApiWrapper.getRecipe("hat")
-      recipe.must_be_nil
+      EdamamApiWrapper.getRecipe("hat")
+      must_respond_with :bad_request
     end
 
   end

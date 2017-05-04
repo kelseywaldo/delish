@@ -6,8 +6,8 @@ class EdamamApiWrapper
   EDAMAM_KEY = ENV["EDAMAM_KEY"]
   EDAMAM_ID = ENV["EDAMAM_ID"]
 
-  def self.getRecipeList(from, to, search_term)
-    url = BASE_URL + "?app_id=#{EDAMAM_ID}" + "&app_key=#{EDAMAM_KEY}" + "&q=#{search_term}" + "&from=#{from}&to=#{to}" + "&returns=Hits&recipe=Recipe"
+  def self.getRecipeList(search_term)
+    url = BASE_URL + "?app_id=#{EDAMAM_ID}" + "&app_key=#{EDAMAM_KEY}" + "&q=#{search_term}" + "&returns=Hits&recipe=Recipe"
 
     response = HTTParty.get(url).parsed_response["hits"]
 
