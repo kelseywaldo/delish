@@ -1,6 +1,10 @@
+require 'will_paginate'
+
 class RecipesController < ApplicationController
+
   def index
-    @recipes = EdamamApiWrapper.getRecipeList(params[:search])
+    recipes = EdamamApiWrapper.getRecipeList(params[:search])
+    @recipes = recipes.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
