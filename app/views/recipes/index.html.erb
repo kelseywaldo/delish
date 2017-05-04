@@ -1,16 +1,17 @@
 <section id="page-header">
-  <h2>Here's some (search term) recipes</h2>
+  <h2>Here's some recipes that match '(search term)'</h2>
 </section>
 
+<div class="row">
 <section id="list-recipe-results">
   <% @recipes.each do | recipe | %>
-    <section class="recipe-block">
+    <section class="recipe-block small-12 medium-3 columns">
       <%= image_tag recipe.image %>
       <%= link_to recipe.name, recipe_path(:name => recipe.name, :uri => recipe.uri) %>
     </section>
   <% end %>
 </section>
-
-<%= will_paginate @recipes, class: "row" %>
+</div>
 <section id="pagination">
+<%= will_paginate @recipes, class: "row" %>
 </section>
