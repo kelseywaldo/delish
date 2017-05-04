@@ -2,18 +2,28 @@
 <h2><%= @recipe.name %></h2>
 </section>
 
+<div class="row">
 <section id="recipe-details">
-  <%= image_tag @recipe.image %>
 
-  <p><%= link_to @recipe.recipe_source, @recipe.url %></p>
-  <ul>
-  <% @recipe.health_labels.each do | healthlabel |  %>
-    <li><%= healthlabel %></li>
-  <% end %>
-  </ul>
-  <ul>
-  <% @recipe.ingredient_lines.each do | ingredient | %>
-    <li><%= ingredient %></li>
-  <% end %>
-  </ul>
+  <section id="recipe-details-image">
+    <%= image_tag @recipe.image %>
+    <p><%= link_to @recipe.recipe_source, @recipe.url %></p>
+  </section>
+
+  <section id="recipe-details-text">
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredient_lines.each do | ingredient | %>
+      <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+    <h3>Labels</h3>
+    <ul>
+      <% @recipe.health_labels.each do | healthlabel |  %>
+      <li><%= healthlabel %></li>
+      <% end %>
+    </ul>
+  </section>
+
 </section>
+</div>

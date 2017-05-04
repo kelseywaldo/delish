@@ -2,16 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* GLOBAL STYLING SETUP
+************************/
+
 body {
   background: #F5F5F5;
-  padding: 80px;
+  padding: 40px;
 }
+
+/* HOMEPAGE STYLING
+************************/
+.input-group-rounded {
+
+  .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+  }
+
+  .input-group-button .button {
+    border-radius:  0 5000px 5000px 0;
+    font-size: 0.8rem;
+  }
+}
+
+/* RECIPES_PATH STYLING
+************************/
 
 .recipe-block {
   background: white;
-  height: 380px;
+  height: 330px;
   margin-bottom: 15px;
 }
+
+.recipe-block img {
+  padding-bottom: 15px;
+}
+
+.recipe-block p {
+  text-align: center;
+}
+
+/* RECIPE_PATH STYLING
+************************/
 
 #recipe-details {
   background: white;
