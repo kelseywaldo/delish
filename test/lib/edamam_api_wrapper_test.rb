@@ -13,9 +13,8 @@ describe EdamamApiWrapper do
   describe "self.getRecipeList" do
 
     it "It can get a list of recipes" do
-      recipes = EdamamApiWrapper.getRecipeList(0, 10, "apple")
+      recipes = EdamamApiWrapper.getRecipeList("apple")
       recipes.class.must_equal Array
-      recipes.length.must_equal 10
 
       recipes.each do | recipe |
         recipe.must_be_instance_of Recipe
