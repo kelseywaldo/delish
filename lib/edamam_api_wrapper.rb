@@ -39,8 +39,9 @@ class EdamamApiWrapper
       url = response[0]["url"]
       health_labels = response[0]["healthLabels"]
       ingredient_lines = response[0]["ingredientLines"]
+      servings = response[0]["yield"].to_i
 
-      response = Recipe.new(name, uri, image, recipe_source: recipe_source, health_labels: health_labels, ingredient_lines: ingredient_lines, url: url)
+      response = Recipe.new(name, uri, image, recipe_source: recipe_source, health_labels: health_labels, ingredient_lines: ingredient_lines, url: url, servings: servings)
     end
 
     rescue JSON::ParserError
