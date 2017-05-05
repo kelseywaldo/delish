@@ -32,7 +32,7 @@ describe EdamamApiWrapper do
   describe "self.getRecipe(uri)" do
 
     it "Can get a recipe given a valid uri" do
-      recipe = EdamamApiWrapper.getRecipe(name: "name", uri: "http://www.edamam.com/ontologies/edamam.owl%23recipe_bef69a5e3324f42fce1eb845c1f57387")
+      recipe = EdamamApiWrapper.getRecipe("http://www.edamam.com/ontologies/edamam.owl%23recipe_bef69a5e3324f42fce1eb845c1f57387")
       recipe.name.must_equal "Dinner Tonight: Rice Salad with Pesto and Shrimp"
     end
 
