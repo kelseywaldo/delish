@@ -1,12 +1,1 @@
-<div class="row">
-  <section id="search" class="small-12 columns">
-    <%= form_tag(recipes_path, method: :get) do %>
-      <p>
-        <%= hidden_field_tag(:from, 1) %>
-        <%= hidden_field_tag(:to, 10) %>
-        <%= text_field_tag(:search, value = nil, options = { placeholder: "What are you hungry for?", class: "search-field" }) %>
-        <%= submit_tag 'Search' %>
-      </p>
-    <% end %>
-  </section>
-</div>
+<%= image_tag "food.jpg" %>

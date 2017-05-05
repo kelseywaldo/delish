@@ -1,19 +1,19 @@
-<section id="search-title">
-  <h2>Here&rsquo;s some recipes that match <span class="recipe-search">&ldquo;<%= params[:search] %>&rdquo;</span></h2>
-</section>
+<section id="main-content">
+  <section id="search-title">
+    <h2>Here&rsquo;s some recipes that match <span class="italic">&ldquo;<%= params[:search] %>&rdquo;</span></h2>
+  </section>
 
-<div class="row">
-<section id="list-recipe-results">
-  <% @recipes.each do | recipe | %>
-    <section class="recipe-block small-12 medium-3 columns">
-      <%= image_tag recipe.image %>
-      <section class="recipe-name">
-        <h5><%= link_to recipe.name, recipe_path(:name => recipe.name, :uri => recipe.uri) %></h5>
+  <div class="row" id="list-recipe-results">
+    <% @recipes.each do | recipe | %>
+      <section class="recipe-image small-12 medium-3 columns">
+        <%= image_tag recipe.image %>
+        <section class="recipe-content overlay">
+          <h5><%= link_to recipe.name, recipe_path(:name => recipe.name, :uri => recipe.uri) %></h5>
+        </section>
       </section>
-    </section>
-  <% end %>
-</section>
-</div>
-<section id="pagination">
-<%= will_paginate @recipes, class: "row" %>
+    <% end %>
+  </div>
+  <section id="pagination">
+  <%= will_paginate @recipes, class: "row" %>
+  </section>
 </section>

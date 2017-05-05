@@ -8,18 +8,34 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= favicon_link_tag 'favicon-check-square-o.ico' %>
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <header>
-      <h1><i class="fa fa-cutlery" aria-hidden="true"></i> delish</h1>
-    </header>
-    <%= yield %>
-    <footer>
-      <p>Powered by <a href="https://www.edamam.com/">Edamam</a></p>
-    </footer>
-  </body>
+  <div id="wrapper">
+    <body>
+      <div class="row">
+        <header>
+          <h1 class="small-12 medium-4 columns"><%= link_to "delish", root_path %></h1>
+          <section id="search" class="small-11 medium-3 columns">
+            <%= form_tag(recipes_path, method: :get) do %>
+              <p>
+                <%= hidden_field_tag(:from, 1) %>
+                <%= hidden_field_tag(:to, 10) %>
+                <%= text_field_tag(:search, value = nil, options = { placeholder: "What are you hungry for?", class: "search-field" }) %>
+                <%= button_tag(type: "submit", class: "search-button small-1 medium-1 columns") do %>
+                  <i class="material-icons">search</i>
+                <% end %>
+              </p>
+            <% end %>
+          </section>
+        </header>
+      </div>
+      <%= yield %>
+      <footer>
+        <p>&copy; 2017 | Powered by <a href="https://www.edamam.com/">Edamam</a></p>
+      </footer>
+    </body>
+  </div>
 </html>

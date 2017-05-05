@@ -19,11 +19,14 @@
  /* GLOBAL STYLING SETUP
  ************************/
 
+
 @import url('https://fonts.googleapis.com/css?family=Neuton:200,400,400i,700');
 
  body {
-   background: #F5F5F5;
-   padding: 40px;
+   background: white;
+   margin: 0;
+   padding: 0;
+   height: 100%;
  }
 
  h1, h2, h3 {
@@ -31,13 +34,41 @@
    font-family: 'Neuton', serif;
  }
 
- h1 {
-   font-size: 5em;
+ /* Formatting header
+ ************************/
+ header {
+   padding: 20px, 40px, 0px, 40px;
  }
 
- h1 i {
+ h1 a {
+   font-size: 2em;
+ }
+
+ h1 a:hover {
+   border-bottom: none;
    color: gold;
  }
+
+ #search {
+   align-content: center;
+ }
+
+ #search .search-field {
+   margin: 40px;
+   border: 1px solid gold;
+   box-shadow: none;
+   border-radius: 500px;
+   padding: 15px;
+   background: none;
+   font-family: 'Neuton', serif;
+   color: #404040;
+ }
+
+ .search-button {
+   color: gold;
+   background: white;
+ }
+
 
  a {
    color: #404040;
@@ -67,8 +98,15 @@
    color: gold;
  }
 
+ .italic {
+   font-style: italic;
+ }
+
  footer {
    text-align: center;
+   background: WhiteSmoke;
+   padding: 40px;
+   width: 100%;
  }
 
  #pagination a {
@@ -78,65 +116,80 @@
    margin: 10px;
  }
 
+ #main-content {
+   padding: 40px;
+ }
+
+
  /* HOMEPAGE STYLING
  ************************/
- #search {
-   align-content: center;
- }
 
- #search .search-field {
-   box-shadow: none;
-   border: none;
-   border-bottom: 2px solid gold;
-   padding: 0px;
-   background: none;
-   font-size: 3em;
- }
-
+#homepage-image {
+  height: 100%;
+  width: 4000px;
+}
 
  /* RECIPES_PATH STYLING
  ************************/
 
- .recipe-block {
-   height: 400px;
-   padding: 20px, 20px, 15px, 20px;
- }
+ .recipe-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
 
- .recipe-block .recipe-name {
-   background: white;
-   height: 100px;
- }
+.recipe-content {
+  visibility: hidden;
+}
 
- .recipe-block h5 {
-   text-align: center;
- }
+.recipe-content h5 {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000;
+  margin-left: .5em;
+  margin-bottom: 1em;
+}
 
- .recipe-search {
-   font-style: italic;
-   font-weight: 400;
- }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gold;
+}
+
+/*.recipe-image:hover .overlay {
+  opacity: .75;
+}*/
+
+.recipe-image:hover .recipe-content {
+  visibility: visible;
+  opacity: .75
+}
+
 
  /* RECIPE_PATH STYLING
  ************************/
 
- #recipe-details {
-   background: white;
-   padding: 40px;
- }
-
- #recipe-details img {
-   margin-bottom: 20px;
- }
-
  #recipe-title, #search-title {
-   border-bottom: 2px solid gold;
+   border-bottom: 3px solid gold;
    margin-bottom: 20px;
  }
 
- #recipe-title h3, #search-title h3 {
-   -webkit-margin-before: 0em;
+ #recipe-title h5 {
+   color: #404040;
+   font-family: 'Neuton', serif;
+   font-size: 1.5em;
  }
 
- /*img {
-    padding-bottom: 15px;
-  }*/
+ #recipe-content {
+   margin-left: 40px;
+ }
