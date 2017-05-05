@@ -19,20 +19,19 @@
  /* GLOBAL STYLING SETUP
  ************************/
 
-@import url('https://fonts.googleapis.com/css?family=Neuton:400,700');
+@import url('https://fonts.googleapis.com/css?family=Neuton:200,400,400i,700');
 
  body {
    background: #F5F5F5;
    padding: 40px;
  }
 
- h1, h2, h3, h4, h5, a, p {
+ h1, h2, h3 {
    color: #404040;
    font-family: 'Neuton', serif;
  }
 
  h1 {
-   font-weight: 700;
    font-size: 5em;
  }
 
@@ -40,20 +39,43 @@
    color: gold;
  }
 
- a:hover {
-   color: gold;
+ a {
+   color: #404040;
  }
 
+ a:hover {
+   color: #404040;
+   border-bottom: 2px solid gold;
+ }
+
+ img {
+    width: 100%;
+  }
+
  .button {
+   font-family: 'Neuton', serif;
+   border: 2px solid gold;
    background-color: gold;
+   color: white;
    border-radius: 500px;
    text-transform: uppercase;
    letter-spacing: .2em;
-   padding: 1em, 2.5em, 1em, 2.5em;
+ }
+
+ .button:hover {
+   background-color: white;
+   color: gold;
  }
 
  footer {
    text-align: center;
+ }
+
+ #pagination a {
+   font-family: sans-serif;
+   border-radius: 500px;
+   padding: 10px;
+   margin: 10px;
  }
 
  /* HOMEPAGE STYLING
@@ -62,26 +84,36 @@
    align-content: center;
  }
 
- .search-field {
-   border-radius: 500px;
-   text-align: center;
+ #search .search-field {
+   box-shadow: none;
+   border: none;
+   border-bottom: 2px solid gold;
+   padding: 0px;
+   background: none;
+   font-size: 3em;
  }
+
 
  /* RECIPES_PATH STYLING
  ************************/
 
  .recipe-block {
+   height: 400px;
+   padding: 20px, 20px, 15px, 20px;
+ }
+
+ .recipe-block .recipe-name {
    background: white;
-   height: 330px;
-   margin-bottom: 15px;
+   height: 100px;
  }
 
- .recipe-block img {
-   padding-bottom: 15px;
- }
-
- .recipe-block p {
+ .recipe-block h5 {
    text-align: center;
+ }
+
+ .recipe-search {
+   font-style: italic;
+   font-weight: 400;
  }
 
  /* RECIPE_PATH STYLING
@@ -91,3 +123,20 @@
    background: white;
    padding: 40px;
  }
+
+ #recipe-details img {
+   margin-bottom: 20px;
+ }
+
+ #recipe-title, #search-title {
+   border-bottom: 2px solid gold;
+   margin-bottom: 20px;
+ }
+
+ #recipe-title h3, #search-title h3 {
+   -webkit-margin-before: 0em;
+ }
+
+ /*img {
+    padding-bottom: 15px;
+  }*/
