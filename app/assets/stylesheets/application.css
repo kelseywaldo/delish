@@ -87,6 +87,7 @@ h1 a:hover {
 }
 
 #search .search-field {
+  position: relative;
   margin: 40px;
   border: 1px solid gold;
   box-shadow: none;
@@ -99,7 +100,13 @@ h1 a:hover {
 
 .search-button {
   color: gold;
-  background: white;
+  position: absolute;
+  top: 45px;
+  right: 10px;
+}
+
+.search-wrapper {
+  padding-right: 40px
 }
 
 /* Formatting footer

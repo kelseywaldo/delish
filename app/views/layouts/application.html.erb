@@ -20,14 +20,12 @@
           <h1 class="small-12 medium-4 columns"><%= link_to "delish", root_path %></h1>
           <section id="search" class="small-11 medium-3 columns">
             <%= form_tag(recipes_path, method: :get) do %>
-              <p>
-                <%= hidden_field_tag(:from, 1) %>
-                <%= hidden_field_tag(:to, 10) %>
+              <div class="search-wrapper">
                 <%= text_field_tag(:search, value = nil, options = { placeholder: "What are you hungry for?", class: "search-field" }) %>
                 <%= button_tag(type: "submit", class: "search-button small-1 medium-1 columns") do %>
-                  <i class="material-icons">search</i>
-                <% end %>
-              </p>
+                <i class="material-icons">search</i>
+                <% end %>          
+              </div>
             <% end %>
           </section>
         </header>
