@@ -8,12 +8,14 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= favicon_link_tag 'favicon-check-square-o.ico' %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <header>
-      <h1><%= link_to "Delicious", root_path %></h1>
+      <h1><%= link_to '<i class="fa fa-cutlery" aria-hidden="true"></i> delish'.html_safe, root_path %></h1>
     </header>
     <%= yield %>
     <footer>

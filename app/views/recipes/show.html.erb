@@ -1,29 +1,24 @@
-<section id="page-header">
-<h2><%= @recipe.name %></h2>
-</section>
-
-<div class="row">
 <section id="recipe-details">
+  <h2><%= @recipe.name %></h2>
+  <div class="row">
+    <section class="small-12 medium-4 columns">
+        <%= image_tag @recipe.image %>
+        <p><%= link_to @recipe.recipe_source, @recipe.url, :class => "button" %></p>
+    </section>
 
-  <section id="recipe-details-image">
-    <%= image_tag @recipe.image %>
-    <p><%= link_to @recipe.recipe_source, @recipe.url %></p>
-  </section>
-
-  <section id="recipe-details-text">
-    <h3>Ingredients</h3>
-    <ul>
-      <% @recipe.ingredient_lines.each do | ingredient | %>
-      <li><%= ingredient %></li>
-      <% end %>
-    </ul>
-    <h3>Labels</h3>
-    <ul>
-      <% @recipe.health_labels.each do | healthlabel |  %>
-      <li><%= healthlabel %></li>
-      <% end %>
-    </ul>
-  </section>
-
+    <section class="small-12 medium-8 columns">
+      <h3>Ingredients</h3>
+      <ul>
+        <% @recipe.ingredient_lines.each do | ingredient | %>
+        <li><%= ingredient %></li>
+        <% end %>
+      </ul>
+      <h3>Labels</h3>
+      <ul>
+        <% @recipe.health_labels.each do | healthlabel |  %>
+        <li><%= healthlabel %></li>
+        <% end %>
+      </ul>
+    </section>
+  </div>
 </section>
-</div>
