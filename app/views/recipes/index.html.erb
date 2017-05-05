@@ -13,7 +13,9 @@
       </section>
     <% end %>
   </div>
-  <section id="pagination">
-  <%= will_paginate @recipes, class: "row" %>
-  </section>
+  <div class="row">
+    <section id="pagination">
+    <%= will_paginate @recipes, class: "row" %>
+    </section>
+  </div>
 </section>

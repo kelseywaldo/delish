@@ -1,138 +1,169 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require foundation_and_overrides
 
- */
+*/
 
- /* GLOBAL STYLING SETUP
- ************************/
+/* GLOBAL STYLING SETUP
+************************/
 
 
 @import url('https://fonts.googleapis.com/css?family=Neuton:200,400,400i,700');
 
- body {
-   background: white;
-   margin: 0;
-   padding: 0;
-   height: 100%;
- }
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
- h1, h2, h3 {
-   color: #404040;
-   font-family: 'Neuton', serif;
- }
+h1, h2, h3 {
+  color: #404040;
+  font-family: 'Neuton', serif;
+}
 
- /* Formatting header
- ************************/
- header {
-   padding: 20px, 40px, 0px, 40px;
- }
+a {
+  color: #404040;
+}
 
- h1 a {
-   font-size: 2em;
- }
+a:hover {
+  color: #404040;
+  border-bottom: 2px solid gold;
+}
 
- h1 a:hover {
-   border-bottom: none;
-   color: gold;
- }
+img {
+  width: 100%;
+}
 
- #search {
-   align-content: center;
- }
+.button {
+  font-family: 'Neuton', serif;
+  border: 2px solid gold;
+  background-color: gold;
+  color: white;
+  border-radius: 500px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
 
- #search .search-field {
-   margin: 40px;
-   border: 1px solid gold;
-   box-shadow: none;
-   border-radius: 500px;
-   padding: 15px;
-   background: none;
-   font-family: 'Neuton', serif;
-   color: #404040;
- }
+.button:hover {
+  background-color: white;
+  color: gold;
+}
 
- .search-button {
-   color: gold;
-   background: white;
- }
+.italic {
+  font-style: italic;
+}
+
+/* Formatting header
+************************/
+
+header {
+  padding: 20px, 40px, 0px, 40px;
+}
+
+h1 a {
+  font-size: 1.5em;
+}
+
+h1 a:hover {
+  border-bottom: none;
+  color: gold;
+}
+
+#search {
+  align-content: center;
+}
+
+#search .search-field {
+  margin: 40px;
+  border: 1px solid gold;
+  box-shadow: none;
+  border-radius: 500px;
+  padding: 15px;
+  background: none;
+  font-family: 'Neuton', serif;
+  color: #404040;
+}
+
+.search-button {
+  color: gold;
+  background: white;
+}
+
+/* Formatting footer
+************************/
+
+footer {
+  text-align: center;
+  background: WhiteSmoke;
+  padding: 40px;
+  width: 100%;
+}
+
+#pagination {
+  padding-top: 40px;
+}
+
+#pagination a, #pagination .current {
+  display: inline-block;
+  font-family: sans-serif;
+  border: 1px solid gold;
+  border-radius: 50%;
+  margin: 1px;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+#pagination a:hover {
+  color: white;
+  background: gold;
+}
+
+#pagination .current {
+  background-color: gold;
+  color: white;
+  font-style: normal;
+}
+
+#pagination .next_page {
+  display: none;
+}
+
+#pagination .previous_page {
+  display: none;
+}
+
+#main-content {
+  padding: 40px;
+}
 
 
- a {
-   color: #404040;
- }
-
- a:hover {
-   color: #404040;
-   border-bottom: 2px solid gold;
- }
-
- img {
-    width: 100%;
-  }
-
- .button {
-   font-family: 'Neuton', serif;
-   border: 2px solid gold;
-   background-color: gold;
-   color: white;
-   border-radius: 500px;
-   text-transform: uppercase;
-   letter-spacing: .2em;
- }
-
- .button:hover {
-   background-color: white;
-   color: gold;
- }
-
- .italic {
-   font-style: italic;
- }
-
- footer {
-   text-align: center;
-   background: WhiteSmoke;
-   padding: 40px;
-   width: 100%;
- }
-
- #pagination a {
-   font-family: sans-serif;
-   border-radius: 500px;
-   padding: 10px;
-   margin: 10px;
- }
-
- #main-content {
-   padding: 40px;
- }
-
-
- /* HOMEPAGE STYLING
- ************************/
+/* HOMEPAGE STYLING
+************************/
 
 #homepage-image {
   height: 100%;
   width: 4000px;
 }
 
- /* RECIPES_PATH STYLING
- ************************/
+/* RECIPES_PATH STYLING
+************************/
 
- .recipe-image {
+.recipe-image {
   position: relative;
   display: flex;
   align-items: center;
@@ -166,30 +197,26 @@
   background-color: gold;
 }
 
-/*.recipe-image:hover .overlay {
-  opacity: .75;
-}*/
-
 .recipe-image:hover .recipe-content {
   visibility: visible;
   opacity: .75
 }
 
 
- /* RECIPE_PATH STYLING
- ************************/
+/* RECIPE_PATH STYLING
+************************/
 
- #recipe-title, #search-title {
-   border-bottom: 3px solid gold;
-   margin-bottom: 20px;
- }
+#recipe-title, #search-title {
+  border-bottom: 3px solid gold;
+  margin-bottom: 20px;
+}
 
- #recipe-title h5 {
-   color: #404040;
-   font-family: 'Neuton', serif;
-   font-size: 1.5em;
- }
+#recipe-title h5 {
+  color: #404040;
+  font-family: 'Neuton', serif;
+  font-size: 1.5em;
+}
 
- #recipe-content {
-   margin-left: 40px;
- }
+#recipe-content {
+  padding-left: 20px;
+}
