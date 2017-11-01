@@ -1,1 +1,2 @@
-View website at https://kelseys-api-muncher.herokuapp.com
+# Delish
+A recipe search engine powered by the Edamam Recipe API
